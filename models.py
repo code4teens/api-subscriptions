@@ -11,7 +11,7 @@ class Subscription(Base):
     created_at = Column(DateTime, nullable=False, default=func.now())
 
     @validates('email')
-    def validate_name(self, key, email):
+    def validate_email(self, key, email):
         if type(email) is not str:
             raise TypeError
 
